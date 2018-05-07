@@ -12,6 +12,8 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+// Modifications copyright (C) 2018 GolangCI
+
 // Package gosec holds the central scanning logic used by gosec security scanner
 package gosec
 
@@ -130,7 +132,13 @@ func (gosec *Analyzer) Process(buildTags []string, packagePaths ...string) error
 		return err
 	}
 
-	for _, pkg := range builtPackage.Created {
+	gosec.ProcessProgram(builtPackage)
+	return nil
+}
+
+// ProcessProgram kicks off the analysis process for a given program
+func (gosec *Analyzer) ProcessProgram(builtPackage *loader.Program) {
+	for _, pkg := range builtPackage.InitialPackages() {
 		gosec.logger.Println("Checking package:", pkg.String())
 		for _, file := range pkg.Files {
 			gosec.logger.Println("Checking file:", builtPackage.Fset.File(file.Pos()).Name())
@@ -148,7 +156,6 @@ func (gosec *Analyzer) Process(buildTags []string, packagePaths ...string) error
 			gosec.stats.NumLines += builtPackage.Fset.File(file.Pos()).LineCount()
 		}
 	}
-	return nil
 }
 
 // ignore a node (and sub-tree) if it is tagged with a "#nosec" comment
