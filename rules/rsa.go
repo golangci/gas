@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"go/ast"
 
-	"github.com/securego/gosec"
+	"github.com/golangci/gosec"
 )
 
 type weakKeyStrength struct {
