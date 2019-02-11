@@ -3,7 +3,7 @@ package testutils
 import (
 	"go/ast"
 
-	"github.com/securego/gosec"
+	"github.com/golangci/gosec"
 )
 
 // MockVisitor is useful for stubbing out ast.Visitor with callback

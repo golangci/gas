@@ -15,7 +15,7 @@ You may obtain a copy of the License [here](http://www.apache.org/licenses/LICEN
 
 [![Build Status](https://travis-ci.org/securego/gosec.svg?branch=master)](https://travis-ci.org/securego/gosec)
 [![Coverage Status](https://codecov.io/gh/securego/gosec/branch/master/graph/badge.svg)](https://codecov.io/gh/securego/gosec)
-[![GoDoc](https://godoc.org/github.com/securego/gosec?status.svg)](https://godoc.org/github.com/securego/gosec)
+[![GoDoc](https://godoc.org/github.com/golangci/gosec?status.svg)](https://godoc.org/github.com/golangci/gosec)
 [![Slack](http://securego.herokuapp.com/badge.svg)](http://securego.herokuapp.com)
 
 ## Install
@@ -37,7 +37,7 @@ gosec --help
 
 ### Local Installation
 
-`$ go get github.com/securego/gosec/cmd/gosec/...`
+`$ go get github.com/golangci/gosec/cmd/gosec/...`
 
 ## Usage
 
@@ -237,7 +237,7 @@ The configuration of TLS rule can be generated from [Mozilla's TLS ciphers recom
 First you need to install the generator tool:
 
 ```bash
-go get github.com/securego/gosec/cmd/tlsconfig/...
+go get github.com/golangci/gosec/cmd/tlsconfig/...
 ```
 
 You can invoke now the `go generate` in the root of the project:

@@ -14,7 +14,7 @@
 
 package rules
 
-import "github.com/securego/gosec"
+import "github.com/golangci/gosec"
 
 // RuleDefinition contains the description of a rule and a mechanism to
 // create it.
