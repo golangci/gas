@@ -4,7 +4,7 @@ import (
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 
-	"github.com/securego/gosec"
+	"github.com/golangci/gosec"
 )
 
 var _ = Describe("Formatter", func() {

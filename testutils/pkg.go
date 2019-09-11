@@ -9,7 +9,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/securego/gosec"
+	"github.com/golangci/gosec"
 	"golang.org/x/tools/go/packages"
 )
 

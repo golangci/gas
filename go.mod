@@ -1,4 +1,4 @@
-module github.com/securego/gosec
+module github.com/golangci/gosec
 
 require (
 	github.com/golang/protobuf v1.3.2 // indirect
